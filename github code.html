@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shivani Patole | Portfolio</title>
+<style>
+:root{--bg:#ffffff;--bg2:#fff4ee;--card:#ffffff;--text:#1f2a44;--muted:#5d6b86;--orange:#ff7a1a;--blue:#2f6bff;--pink:#ffd6e6;--line:#f3dcd0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141a2b;--bg2:#1a2138;--card:#1f2742;--text:#f1f4ff;--muted:#a8b3d1;--pink:#4a2a3d;--line:#323c5e}}
+:root[data-theme="dark"]{--bg:#141a2b;--bg2:#1a2138;--card:#1f2742;--text:#f1f4ff;--muted:#a8b3d1;--pink:#4a2a3d;--line:#323c5e}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;line-height:1.6;overflow-x:hidden}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;display:flex;justify-content:center;gap:6px;flex-wrap:wrap;padding:10px;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav a{color:var(--text);text-decoration:none;font-weight:600;font-size:.92rem;padding:6px 14px;border-radius:99px;transition:.3s}
+nav a:hover{background:var(--orange);color:#fff}
+section{padding:70px 20px;max-width:1000px;margin:auto}
+h2{font-size:2rem;text-align:center;margin-bottom:34px}
+h2 span{color:var(--orange)}
+h2::after{content:"";display:block;width:60px;height:4px;border-radius:4px;margin:10px auto 0;background:linear-gradient(90deg,var(--orange),var(--blue))}
+.hero{max-width:none;min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--bg2),var(--pink) 60%,var(--bg))}
+.blob{position:absolute;border-radius:50%;filter:blur(8px);opacity:.55;animation:float 9s ease-in-out infinite}
+.b1{width:260px;height:260px;background:var(--orange);top:-60px;left:-60px}
+.b2{width:200px;height:200px;background:var(--blue);bottom:-40px;right:8%;animation-delay:-3s}
+.b3{width:140px;height:140px;background:#ff9ec6;top:20%;right:-30px;animation-delay:-6s}
+@keyframes float{50%{transform:translateY(-30px) scale(1.08)}}
+.hero-in{position:relative;animation:rise 1s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(30px)}}
+.avatar{width:130px;height:130px;border-radius:50%;margin:0 auto 20px;display:grid;place-items:center;font-size:3rem;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--orange),var(--blue));box-shadow:0 0 0 6px var(--card),0 0 0 9px var(--orange);animation:pulse 3s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 6px var(--card),0 0 0 16px rgba(255,122,26,.35)}}
+.hero h1{font-size:clamp(2.2rem,7vw,3.8rem)}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--orange),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{font-size:1.2rem;color:var(--muted);margin:8px 0 22px;min-height:1.8em}
+.role b{color:var(--blue);border-right:2px solid var(--orange);padding-right:3px;animation:blink .8s infinite}
+@keyframes blink{50%{border-color:transparent}}
+.btn{display:inline-block;padding:12px 28px;border-radius:99px;background:var(--orange);color:#fff;text-decoration:none;font-weight:700;margin:4px;transition:.3s;box-shadow:0 8px 20px rgba(255,122,26,.35)}
+.btn.alt{background:var(--blue);box-shadow:0 8px 20px rgba(47,107,255,.3)}
+.btn:hover{transform:translateY(-4px)}
+.about{text-align:center;max-width:720px;margin:auto;color:var(--muted);font-size:1.08rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;transition:.35s;position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;left:0;top:0;height:100%;width:5px;background:linear-gradient(var(--orange),var(--blue))}
+.card:hover{transform:translateY(-8px);box-shadow:0 14px 30px rgba(47,107,255,.15)}
+.card h3{color:var(--blue);margin-bottom:4px}
+.card .tag{display:inline-block;font-size:.8rem;font-weight:700;background:var(--pink);color:var(--orange);padding:2px 12px;border-radius:99px;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.95rem}
+.bars{margin-top:14px}.bar{margin-bottom:8px}.bar small{font-weight:700;color:var(--text)}.bar i{display:block;height:9px;border-radius:9px;background:var(--pink);position:relative;overflow:hidden;margin-top:3px}.bar i::after{content:"";position:absolute;left:0;top:0;height:100%;width:0;border-radius:9px;background:linear-gradient(90deg,var(--orange),var(--blue));transition:width 1.6s ease .3s}.reveal.show .bar i::after{width:var(--w)}
+.chips{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.chip{padding:10px 22px;border-radius:99px;background:var(--card);border:2px solid var(--blue);font-weight:700;transition:.3s}
+.chip:nth-child(even){border-color:var(--orange)}
+.chip:hover{background:var(--blue);color:#fff;transform:scale(1.1) rotate(-3deg)}
+.chip:nth-child(even):hover{background:var(--orange)}
+.hob{text-align:center}
+.hob .ic{font-size:2.4rem;display:block;margin-bottom:6px;animation:bounce 2.4s infinite}
+.hob:nth-child(2n) .ic{animation-delay:.4s}.hob:nth-child(3n) .ic{animation-delay:.8s}
+@keyframes bounce{50%{transform:translateY(-8px)}}
+.wide{background:var(--bg2);max-width:none}
+.wide>*{max-width:1000px;margin-left:auto;margin-right:auto}
+.event{display:flex;gap:18px;align-items:center;background:linear-gradient(120deg,var(--pink),var(--card));border:1px solid var(--line);border-radius:20px;padding:26px}
+.event .ic{font-size:3rem}
+footer{text-align:center;padding:30px 16px;background:linear-gradient(90deg,var(--orange),var(--blue));color:#fff}
+.reveal{opacity:0;transform:translateY(40px);transition:.8s}
+.reveal.show{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<nav><a href="#home">Home</a><a href="#about">About</a><a href="#education">Education</a><a href="#subjects">Subjects</a><a href="#hobbies">Hobbies</a><a href="#achievements">Activities</a></nav>
+
+<section class="hero" id="home">
+<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+<div class="hero-in">
+<div class="avatar">SP</div>
+<p>Hello, I'm</p>
+<h1><em>Shivani Patole</em></h1>
+<p class="role"><b id="typed"></b></p>
+<a class="btn" href="#education">My Education</a><a class="btn alt" href="#hobbies">My Hobbies</a>
+</div>
+</section>
+
+<section id="about" class="reveal">
+<h2>About <span>Me</span></h2>
+<p class="about">I am a BCA 2nd year student at SKE BCA College, Chandgad. I enjoy learning programming and databases, and I love sports, music and exploring new things. I am curious, energetic and always ready to learn.</p>
+</section>
+
+<section class="wide reveal" id="education"><div>
+<h2>My <span>Education</span></h2>
+<div class="grid">
+<div class="card"><span class="tag">Current</span><h3>BCA – 2nd Year</h3><p>SKE BCA College, Chandgad<br>Currently in Semester 3</p><div class="bars"><div class="bar"><small>Sem 1 · 75%</small><i style="--w:75%"></i></div><div class="bar"><small>Sem 2 · 84%</small><i style="--w:84%"></i></div></div></div>
+<div class="card"><span class="tag">12th · 58%</span><h3>Higher Secondary</h3><p>N. B. Patil Jr. College, Chandgad<br>Scored 58%</p></div>
+<div class="card"><span class="tag">10th · 78%</span><h3>Secondary School</h3><p>The New English School<br>Scored 78%</p></div>
+</div></div></section>
+
+<section id="subjects" class="reveal">
+<h2>Semester 3 <span>Subjects</span></h2>
+<div class="chips">
+<div class="chip">🐍 Python</div><div class="chip">🗄️ DBMS</div><div class="chip">🌐 Web</div>
+<div class="chip">💻 Software</div><div class="chip">📊 Statistics</div><div class="chip">➗ DM</div>
+</div></section>
+
+<section class="wide reveal" id="hobbies"><div>
+<h2>My <span>Hobbies</span></h2>
+<div class="grid">
+<div class="card hob"><span class="ic">🏍️</span><h3>Bike Riding</h3></div>
+<div class="card hob"><span class="ic">🤼</span><h3>Kabaddi</h3></div>
+<div class="card hob"><span class="ic">🏃‍♀️</span><h3>Kho Kho</h3></div>
+<div class="card hob"><span class="ic">🏏</span><h3>Cricket</h3></div>
+<div class="card hob"><span class="ic">🎯</span><h3>Lagori</h3></div>
+<div class="card hob"><span class="ic">🎹</span><h3>Harmonium</h3></div>
+<div class="card hob"><span class="ic">🎶</span><h3>Singing Bhajans</h3></div>
+</div></div></section>
+
+<section id="achievements" class="reveal">
+<h2>Activities & <span>Participation</span></h2>
+<div class="event"><span class="ic">🏆</span><div><h3>Youth Festival 2026</h3><p style="color:var(--muted)">Participated at the college in Jaysingpur (Jasungpur College).</p></div></div>
+</section>
+
+<footer><p>Thank you for visiting! 🌸</p><p>© 2026 Shivani Patole</p></footer>
+
+<script>
+var words=["BCA Student","Python Learner","Sportsperson","Harmonium Player"],w=0,c=0,del=false,el=document.getElementById('typed');
+function t(){var s=words[w];el.textContent=s.slice(0,c);
+if(!del&&c++===s.length){del=true;return setTimeout(t,1200)}
+if(del&&--c<0){del=false;c=0;w=(w+1)%words.length}
+setTimeout(t,del?50:90)}
+t();
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('show')})},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(function(r){io.observe(r)});
+</script>
+</body>
+</html>
